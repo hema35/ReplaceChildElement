@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      Replace Page Element
-    </title>
-    <script>
-      function replaceHeading() {
+
+<head>
+  <title>
+    Replace Page Element
+  </title>
+  <script>
+    function replaceHeading() {
         var newH2 = document.createElement('h2');
         var newH2Text = document.createTextNode('Welcome');
         newH2.appendChild(newH2Text);
@@ -13,16 +14,20 @@
         var oldP = document.getElementById('para1');
         myDiv.replaceChild(newH2, oldP);
       }
-      window.onload = function() {
+       function replace() {
+        console.log('gfghf');
         document.getElementById('btn').onclick = replaceHeading;
       };
-    </script>
-  </head>
-  <body>
-    <div id="id1">
-      <p id="para1">Welcome to my webpage.</p>
-      <p id="para2">Please take a look around.</p>
-      <input id="btn" value="Replace Element" type="button" />
-    </div>
-  </body>
+  </script>
+</head>
+
+<body>
+  <div id="id1">
+    <p id="para1">Welcome to my webpage.</p>
+    <p id="para2">Please take a look around.</p>
+    <input id="btn" value="Replace Element" type="button" />
+    <button onclick="replace()">replace</button>
+  </div>
+</body>
+
 </html>
